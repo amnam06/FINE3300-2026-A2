@@ -40,6 +40,7 @@ The following shows the format of the calculator's results.
 3. Install Pandas and Matplotlib if they are not already installed:
 
     a. pip install pandas
+    
     b. pip install matplotlib
     
 4. Keep STATIC_INFLATIONCALC.csv in the same folder as the Python files
