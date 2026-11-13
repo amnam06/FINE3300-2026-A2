@@ -17,7 +17,7 @@ For the first part of the assignment, I used Pandas to read the CPI data from a 
 The graph shows that the Canadian CPI has generally increased over time, meaning that the overall price level has risen. The CPI increases more quickly during some periods than others. The annual inflation line shows these changes more clearly, including periods of higher inflation and periods when inflation was lower or negative. The dotted line marks the CPI base level of 100, with 2002 as the base year.
 
 ## Part 2: Inflation Calculator
-For the second part of the assignment, I created a class called �InflationCalculator� that reads the CPI data from the CSV file. The program asks the user to enter an original price, a first date, and a second date. Dates must be entered in YYYY-MM format.
+For the second part of the assignment, I created a class called "InflationCalculator" that reads the CPI data from the CSV file. The program asks the user to enter an original price, a first date, and a second date. Dates must be entered in YYYY-MM format.
 
 The program checks that the price is valid and that both dates are correctly formatted and available in the CPI data. It then uses the CPI values for the selected months to calculate the adjusted price, percentage change, number of years between the dates, and average annual inflation rate.
 
