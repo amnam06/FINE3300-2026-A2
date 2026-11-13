@@ -1,6 +1,7 @@
 #Canadian Inflation Calculator
 
 import pandas as pd
+import numpy as np
 
 #Create a class called InflationCalculator
 class InflationCalculator:
@@ -53,10 +54,12 @@ class InflationCalculator:
         #Get the CPI values for both dates
         cpi1 = self.get_cpi(date1)
         cpi2 = self.get_cpi(date2)
+        #Store both CPI values in the numpy array
+        cpi_values = np.array([cpi1, cpi2])
         #Calculate the adjusted price using the CPI values
-        adjusted_price = price * (cpi2/cpi1)
-        #Calculate the total percentage change in CPI
-        percentage_change = ((cpi2/cpi1) - 1) * 100
+        adjusted_price = price * (cpi_values[1] / cpi_values[0])
+        #Calculate the percentage change in CPI
+        percentage_change = ((cpi_values[1] / cpi_values[0]) - 1) * 100
         #Extract the year and month from the first date
         year1 = int(date1[:4])
         month1 = int(date1[5:])
@@ -73,7 +76,9 @@ class InflationCalculator:
             annual_rate = 0
         else:
             #Use compound growth to calculate annual inflation
-            annual_rate = ((cpi2/cpi1) ** (12/months) - 1) * 100
+            annual_rate = (
+                (cpi_values[1] / cpi_values[0]) ** (12 / months) - 1
+            ) * 100
         #Return all calculated results
         return adjusted_price, percentage_change, years, annual_rate, cpi1, cpi2
 
