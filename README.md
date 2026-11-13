@@ -38,8 +38,10 @@ The following shows the format of the calculator's results.
 1. Open the assignment folder in Visual Studio Code
 2. Make sure Python is installed
 3. Install Pandas and Matplotlib if they are not already installed:
+
     a. pip install pandas
     b. pip install matplotlib
+    
 4. Keep STATIC_INFLATIONCALC.csv in the same folder as the Python files
 5. Run CpiGraph.ipynb to display the CPI graph and to save it as CpiGraph.png
 6. Run InflationCalculator.py to open the inflation calculator
